@@ -1,0 +1,27 @@
+:root {
+  --rosa: #ff9ec6;
+  --rosa-claro: #ffc2dc;
+  --rosa-clarito: #faf0f4;
+  --rosa-oscuro: #ff7bb3;
+  --fucsia-claro: #fb64a3;
+  --fucsia: #fd388a;
+  --fucsia-oscuro: #bd2162;
+  --amarillo: #ffde59;
+  --amarillo-claro: #fff3c2;
+  --amarillo-oscuro: #ffd324;
+  --blanco: #ffffff;
+  --negro: #333333;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+@font-face{
+  font-family: 'title';
+  src: url(./fonts/Super\ Joyful.ttf) format('truetype');
+  font-display: swap;
+}
+
+body {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', 'Arial Rounded MT Bold', sans-serif;
+  background: url("./assets/background.jpg") repeat;
+  background-size: 25% ;
+}

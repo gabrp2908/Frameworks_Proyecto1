@@ -1,0 +1,222 @@
+:root {
+  /* Colores optimizados */
+  --rosa: #ff9ec6;
+  --rosa-oscuro: #ff7bb3;
+  --fucsia: #ff2c84;
+  --fucsia-oscuro: #e60073;
+  --fucsia-claro: #ff66a3;
+  --amarillo: #ffde59;
+  --amarillo-claro: #fff3c2;
+  --rosa-clarito: #fff0f5;
+  --blanco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--rosa-clarito) 0%, var(--amarillo-claro) 100%);
+}
+
+.login-card {
+  background: var(--blanco);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(255, 44, 132, 0.2);
+  text-align: center;
+  border: 3px solid var(--fucsia);
+  max-width: 400px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(255, 44, 132, 0.3);
+}
+
+.login-header {
+  margin-bottom: 1.5rem;
+}
+
+.login-header h1 {
+  color: var(--rosa-oscuro);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 0 var(--fucsia);
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.login-header h2 {
+  color: var(--fucsia-claro);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  animation: bounce 2s ease infinite;
+  margin: 1rem 0;
+}
+
+.icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--fucsia);
+  padding: 5px;
+  background: var(--amarillo-claro);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+
+.login-form {
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--fucsia);
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--fucsia);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--rosa-clarito);
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--fucsia-oscuro);
+  background: var(--blanco);
+  box-shadow: 0 0 0 3px rgba(255, 44, 132, 0.2);
+  transform: scale(1.02);
+}
+
+.login-button {
+  width: 100%;
+  background: linear-gradient(to bottom, var(--rosa), var(--fucsia));
+  color: var(--blanco);
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 44, 132, 0.3);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 44, 132, 0.4);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.error-message,
+.success-message {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive;
+  animation: fadeIn 0.3s ease;
+}
+
+.error-message {
+  color: #d32f2f;
+  background: #ffebee;
+  border-left: 4px solid #d32f2f;
+}
+
+.success-message {
+  color: #388e3c;
+  background: #e8f5e8;
+  border-left: 4px solid #388e3c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.switch-mode {
+  margin: 1.5rem 0;
+  color: var(--fucsia);
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.switch-button {
+  background: none;
+  border: none;
+  color: var(--fucsia-oscuro);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.switch-button:hover {
+  color: var(--rosa-oscuro);
+}
+
+.login-hint {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background: var(--amarillo-claro);
+  border-radius: 12px;
+  border: 2px dashed var(--fucsia);
+}
+
+.login-hint p {
+  color: var(--fucsia-oscuro);
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .login-header h1 {
+    font-size: 2rem;
+  }
+  
+  .login-header h2 {
+    font-size: 1rem;
+  }
+}
