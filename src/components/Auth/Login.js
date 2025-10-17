@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css';
+import '../../styles/Login.css';
 import chefIcon from '../../styles/assets/cooking_mama.png'; 
 
 const Login = ({ onLogin, onRegister }) => {

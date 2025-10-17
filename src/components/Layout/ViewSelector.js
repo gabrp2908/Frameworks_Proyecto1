@@ -1,12 +1,12 @@
 import React from 'react';
-import './ViewSelector.css';
+import '../../styles/ViewSelector.css';
 
 const ViewSelector = ({ currentView, onViewChange }) => {
   const views = [
-    { id: 'carousel', label: 'Desplazado', icon: '⇄' },
-    { id: 'circular', label: 'Circular', icon: '⭕' },
-    { id: 'grid', label: 'Cuadriculada', icon: '◼️' },
-    { id: 'pills', label: 'Pills', icon: '🔘' }
+    { id: 'carousel', label: 'Carousel', icon: '⇄' },
+    { id: 'circular', label: 'Circular', icon: '⏺︎' },
+    { id: 'grid', label: 'Cuadriculada', icon: '⏹︎' },
+    { id: 'pills', label: 'Pills', icon: '☑︎' }
   ];
 
   return (

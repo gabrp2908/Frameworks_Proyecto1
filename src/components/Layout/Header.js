@@ -1,6 +1,6 @@
 import React from 'react';
 import ViewSelector from './ViewSelector';
-import './Header.css';
+import '../../styles/Header.css';
 
 const Header = ({ currentView, onViewChange, onAddRecipe, onLogout, currentUser }) => {
   return (
