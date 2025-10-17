@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Login from './components/Auth/Login';
+import Header from './components/Layout/Header';
 import './styles/App.css';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
+  const [currentView, setCurrentView] = useState('grid');
 
   // Sistema de usuarios
   const getStoredUsers = () => {
@@ -66,9 +68,21 @@ function App() {
   }
 
   return (
-    <div className="app">  
+    <div className="app">
+      <Header
+        currentView={currentView}
+        onViewChange={setCurrentView}
+        onLogout={handleLogout}
+        currentUser={currentUser}
+      />
+      
+      <main className="main-content">
+       
+      </main>
+
     </div>
   );
 }
+
 
 export default App;

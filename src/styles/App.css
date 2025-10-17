@@ -6,6 +6,7 @@
   --fucsia-claro: #fb64a3;
   --fucsia: #fd388a;
   --fucsia-oscuro: #bd2162;
+  --fucsia-oscurito: #b0004a;
   --amarillo: #ffde59;
   --amarillo-claro: #fff3c2;
   --amarillo-oscuro: #ffd324;
@@ -16,7 +17,7 @@
 
 @font-face{
   font-family: 'title';
-  src: url(./fonts/Super\ Joyful.ttf) format('truetype');
+  src: url(./fonts/Biscuit\ Glitch.ttf) format('truetype');
   font-display: swap;
 }
 

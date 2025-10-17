@@ -79,7 +79,7 @@ const Login = ({ onLogin, onRegister }) => {
           <h1>Blog de Recetas</h1>
           <h2>Proyecto 1 - Manejo de Frameworks</h2>
           <div className="icon">
-            <img src={chefIcon} alt="Chef" />
+            <img src={chefIcon}/>
           </div>
           <h2>{isLoginMode ? 'Iniciar Sesión' : 'Registrar Usuario'}</h2>
         </div>
