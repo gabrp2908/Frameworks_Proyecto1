@@ -1,0 +1,31 @@
+.view-selector {
+  position: relative;
+  display: inline-block;
+}
+
+
+.view-dropdown {
+  color: var(--fucsia-oscuro);
+  border: 3px solid var(--fucsia-oscuro);
+  padding: 0.8rem 3rem 0.8rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3e%3cpath fill='%23b0004a' d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 20px;
+  min-width: 200px;
+  box-shadow: 0 8px 32px rgba(161, 24, 109, 0.507);
+  transition: all 0.3s ease;
+  }
+
+.view-dropdown option {
+  color: var(--fucsia-oscuro);
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1rem;
+}
+

@@ -21,8 +21,11 @@
   font-display: swap;
 }
 
-body {
+*{
   font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', 'Arial Rounded MT Bold', sans-serif;
+}
+
+body {
   background: url("./assets/background.jpg") repeat;
   background-size: 25% ;
 }
