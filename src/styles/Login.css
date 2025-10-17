@@ -59,8 +59,7 @@
   color: var(--fucsia);
   font-weight: bold;
   font-size: 1.1rem;
-  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
-}
+  }
 
 .input-group input {
   width: 100%;
@@ -70,8 +69,7 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   background: var(--rosa-clarito);
-  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
-}
+  }
 
 .input-group input:focus {
   outline: none;

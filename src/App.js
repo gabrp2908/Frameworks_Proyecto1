@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Login from './components/Auth/Login';
 import Header from './components/Layout/Header';
+import RecipeForm from './components/Recipe/RecipeForm';
 import './styles/App.css';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [currentView, setCurrentView] = useState('grid');
+  const [recipes, setRecipes] = useState([]);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [showRecipeForm, setShowRecipeForm] = useState(false);
+  const [editingRecipe, setEditingRecipe] = useState(null);
 
   // Sistema de usuarios
   const getStoredUsers = () => {
@@ -67,19 +72,66 @@ function App() {
     );
   }
 
+  const handleAddRecipe = (recipeData) => {
+    const newRecipe = {
+      id: Date.now().toString(),
+      ...recipeData,
+      createdAt: new Date().toISOString(),
+      createdBy: currentUser?.username || 'Anónimo'
+    };
+    const updatedRecipes = [...recipes, newRecipe];
+    setRecipes(updatedRecipes);
+    localStorage.setItem('cookingRecipes', JSON.stringify(updatedRecipes));
+    setShowRecipeForm(false);
+  };
+
+  const handleUpdateRecipe = (recipeData) => {
+    const updatedRecipes = recipes.map(recipe =>
+      recipe.id === editingRecipe.id ? { ...recipe, ...recipeData } : recipe
+    );
+    setRecipes(updatedRecipes);
+    localStorage.setItem('cookingRecipes', JSON.stringify(updatedRecipes));
+    setShowRecipeForm(false);
+    setEditingRecipe(null);
+  };
+
+  const handleDeleteRecipe = (recipeId) => {
+    const updatedRecipes = recipes.filter(recipe => recipe.id !== recipeId);
+    setRecipes(updatedRecipes);
+    localStorage.setItem('cookingRecipes', JSON.stringify(updatedRecipes));
+    setSelectedRecipe(null);
+  };
+
+  const handleEditRecipe = (recipe) => {
+    setEditingRecipe(recipe);
+    setShowRecipeForm(true);
+    setSelectedRecipe(null);
+  };
+
   return (
     <div className="app">
       <Header
         currentView={currentView}
         onViewChange={setCurrentView}
+        onAddRecipe={() => setShowRecipeForm(true)}
         onLogout={handleLogout}
         currentUser={currentUser}
       />
       
       <main className="main-content">
-       
+        
       </main>
 
+      {showRecipeForm && (
+        <RecipeForm
+          recipe={editingRecipe}
+          onSubmit={editingRecipe ? handleUpdateRecipe : handleAddRecipe}
+          onCancel={() => {
+            setShowRecipeForm(false);
+            setEditingRecipe(null);
+          }}
+        />
+      )}
     </div>
   );
 }
