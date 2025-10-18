@@ -6,7 +6,7 @@ const GridView = ({ recipes, onRecipeSelect, onEditRecipe }) => {
   if (recipes.length === 0) {
     return (
       <div className="grid-empty">
-        <p>🍳 No hay recetas aún. ¡Agrega la primera!</p>
+        <p>No hay recetas aún. ¡Agrega la primera!</p>
       </div>
     );
   }
