@@ -169,7 +169,7 @@ const sampleRecipes = [
     id: '7',
     title: 'Paella Valenciana',
     description: 'Paella tradicional con pollo, conejo y verduras',
-    image: 'https://www.spainfoodsherpas.com/sfs/wp-content/uploads/2016/11/paella-valenciana-recipe-1.jpg',
+    image: 'https://www.paulinacocina.net/wp-content/uploads/2023/09/paella-valenciana-tradicional.jpg',
     ingredients: [
       { name: 'Arroz bomba', quantity: '400g' },
       { name: 'Pollo', quantity: '300g en trozos' },
