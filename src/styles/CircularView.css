@@ -1,0 +1,119 @@
+.circular-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 3rem 2rem;
+  min-height: 70vh;
+  background: linear-gradient(135deg, var(--rosa-clarito), var(--rosa));
+  border-radius: 30px;
+  margin: 1rem;
+  box-shadow: inset 0 0 50px rgba(255, 34, 174, 0.1);
+  position: relative;
+}
+
+.circular-view::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23ff22ae" opacity="0.1"/></svg>');
+  pointer-events: none;
+}
+
+.circular-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--fucsia-oscuro);
+  font-size: 1.4rem;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  background: var(--rosa-clarito);
+  border-radius: 20px;
+  margin: 2rem;
+  border: 3px dashed var(--fucsia-oscuro);
+  grid-column: 1 / -1;
+}
+
+.circular-empty p {
+  margin: 0;
+  text-shadow: 1px 1px 0 var(--rosa);
+}
+ 
+.circular-view > * {
+  animation: popIn 0.6s ease;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-180deg);
+  }
+  70% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* Stagger animation for multiple items */
+.circular-view > *:nth-child(1) { animation-delay: 0.1s; }
+.circular-view > *:nth-child(2) { animation-delay: 0.2s; }
+.circular-view > *:nth-child(3) { animation-delay: 0.3s; }
+.circular-view > *:nth-child(4) { animation-delay: 0.4s; }
+.circular-view > *:nth-child(5) { animation-delay: 0.5s; }
+.circular-view > *:nth-child(6) { animation-delay: 0.6s; }
+
+.recipe-item.circular {
+  width: 180px;
+  height: 180px;
+}
+
+.recipe-item.circular .recipe-card {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 6px solid var(--fucsia-oscuro);
+  box-shadow: 0 10px 35px rgba(255, 34, 174, 0.4);
+}
+
+.recipe-item.circular:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.circular-image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circular-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circular-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  font-size: 1.1rem;
+  width: 90%;
+  background: rgba(255, 34, 174, 0.85);
+  padding: 0.8rem 0.5rem;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  line-height: 1.2;
+}
