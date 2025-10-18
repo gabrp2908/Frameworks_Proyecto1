@@ -2,7 +2,7 @@
 const sampleRecipes = [
   {
     id: '1',
-    title: '🍕 Pizza Margherita',
+    title: 'Pizza Margherita',
     description: 'La pizza clásica italiana con tomate, mozzarella y albahaca fresca',
     image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=400&h=300&fit=crop',
     ingredients: [
@@ -28,9 +28,9 @@ const sampleRecipes = [
   },
   {
     id: '2',
-    title: '🍝 Espaguetis Carbonara',
+    title: 'Espaguetis Carbonara',
     description: 'Pasta cremosa estilo italiano auténtico sin crema',
-    image: 'https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=400&h=300&fit=crop',
+    image: 'https://borbordonosti.com/wp-content/uploads/2017/06/pasta-carbonara-600x388.jpg',
     ingredients: [
       { name: 'Espaguetis', quantity: '400g' },
       { name: 'Panceta o guanciale', quantity: '200g' },
@@ -53,7 +53,7 @@ const sampleRecipes = [
   },
   {
     id: '3',
-    title: '🥗 Ensalada César',
+    title: 'Ensalada César',
     description: 'Ensalada clásica con aderezo cremoso y crutones crujientes',
     image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop',
     ingredients: [
@@ -81,7 +81,7 @@ const sampleRecipes = [
   },
   {
     id: '4',
-    title: '🍔 Hamburguesas Caseras',
+    title: 'Hamburguesas Caseras',
     description: 'Hamburguesas jugosas con pan artesanal y ingredientes frescos',
     image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop',
     ingredients: [
@@ -109,7 +109,7 @@ const sampleRecipes = [
   },
   {
     id: '5',
-    title: '🍣 Sushi California Roll',
+    title: 'Sushi California Roll',
     description: 'Rolls de sushi rellenos de aguacate, pepino y cangrejo',
     image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop',
     ingredients: [
@@ -139,7 +139,7 @@ const sampleRecipes = [
   },
   {
     id: '6',
-    title: '🍫 Brownies de Chocolate',
+    title: 'Brownies de Chocolate',
     description: 'Brownies intensos de chocolate con nueces y centro suave',
     image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop',
     ingredients: [
@@ -167,9 +167,9 @@ const sampleRecipes = [
   },
   {
     id: '7',
-    title: '🥘 Paella Valenciana',
+    title: 'Paella Valenciana',
     description: 'Paella tradicional con pollo, conejo y verduras',
-    image: 'https://images.unsplash.com/photo-1531512073830-b031a6d1c5bc?w=400&h=300&fit=crop',
+    image: 'https://www.spainfoodsherpas.com/sfs/wp-content/uploads/2016/11/paella-valenciana-recipe-1.jpg',
     ingredients: [
       { name: 'Arroz bomba', quantity: '400g' },
       { name: 'Pollo', quantity: '300g en trozos' },
@@ -198,7 +198,7 @@ const sampleRecipes = [
   },
   {
     id: '8',
-    title: '🍲 Lasaña de Carne',
+    title: 'Lasaña de Carne',
     description: 'Lasaña casera con capas de pasta, carne y bechamel',
     image: 'https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop',
     ingredients: [
@@ -226,6 +226,69 @@ const sampleRecipes = [
       'Dejar reposar 10 minutos antes de cortar'
     ],
     notes: 'Para ahorrar tiempo, se pueden usar láminas de lasaña que no necesitan precocción'
+  },
+  {
+    id: '9',
+    title: 'Torta Marmoleada',
+    description: 'Bizcocho con efecto mármol que combina vainilla y chocolate',
+    image: 'https://static.solopostres.com/uploads/2014/06/torta-marmolada-800x417.jpg',
+    ingredients: [
+      { name: 'Harina de trigo', quantity: '300g' },
+      { name: 'Azúcar', quantity: '250g' },
+      { name: 'Mantequilla', quantity: '200g' },
+      { name: 'Huevos', quantity: '4 unidades' },
+      { name: 'Leche', quantity: '120ml' },
+      { name: 'Polvo de hornear', quantity: '2 cucharaditas' },
+      { name: 'Esencia de vainilla', quantity: '1 cucharadita' },
+      { name: 'Cacao en polvo', quantity: '3 cucharadas' },
+      { name: 'Sal', quantity: '1 pizca' }
+    ],
+    steps: [
+      'Precalentar el horno a 180°C y engrasar un molde para cake',
+      'Batir la mantequilla con el azúcar hasta obtener una crema pálida',
+      'Agregar los huevos uno por uno, batiendo bien después de cada adición',
+      'Incorporar la esencia de vainilla y la leche',
+      'Tamizar la harina, polvo de hornear y sal, y mezclar suavemente',
+      'Dividir la masa en dos partes iguales',
+      'En una parte, agregar el cacao en polvo y mezclar bien',
+      'Alternar cucharadas de ambas masas en el molde',
+      'Con un palillo, hacer movimientos circulares para crear el efecto mármol',
+      'Hornear por 40-45 minutos hasta que al insertar un palillo salga limpio',
+      'Dejar enfriar en el molde 10 minutos antes de desmoldar'
+    ],
+    notes: 'No mezclar demasiado las dos masas para que el efecto mármol sea visible'
+  },
+  {
+    id: '10',
+    title: 'Cheesecake',
+    description: 'Cheesecake cremoso y denso estilo Nueva York con base de galleta',
+    image: 'https://img.taste.com.au/O8JC4F3Q/taste/2016/11/new-york-cheesecake-40742-1.jpeg',
+    ingredients: [
+      { name: 'Galletas digestivas', quantity: '200g' },
+      { name: 'Mantequilla derretida', quantity: '100g' },
+      { name: 'Queso crema', quantity: '900g' },
+      { name: 'Azúcar', quantity: '200g' },
+      { name: 'Huevos grandes', quantity: '4 unidades' },
+      { name: 'Crema agria', quantity: '200ml' },
+      { name: 'Esencia de vainilla', quantity: '2 cucharaditas' },
+      { name: 'Ralladura de limón', quantity: '1 cucharadita' },
+      { name: 'Jugo de limón', quantity: '1 cucharada' },
+      { name: 'Harina', quantity: '3 cucharadas' }
+    ],
+    steps: [
+      'Precalentar el horno a 160°C y forrar un molde desmontable',
+      'Triturar las galletas y mezclar con la mantequilla derretida',
+      'Presionar la mezcla en la base del molde y refrigerar',
+      'Batir el queso crema con el azúcar hasta que esté suave',
+      'Agregar los huevos uno por uno, batiendo bien después de cada uno',
+      'Incorporar la crema agria, vainilla, ralladura y jugo de limón',
+      'Añadir la harina y mezclar hasta combinar',
+      'Verter la mezcla sobre la base de galleta',
+      'Hornear por 1 hora y 15 minutos hasta que los bordes estén firmes',
+      'Dejar enfriar en el horno entreabierto por 1 hora',
+      'Refrigerar por al menos 4 horas (preferiblemente toda la noche) antes de servir'
+    ],
+    notes: 'Para evitar grietas, no abrir el horno durante los primeros 45 minutos de horneado'
   }
 ];
 

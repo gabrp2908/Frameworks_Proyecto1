@@ -1,5 +1,5 @@
 .recipe-item.carousel .recipe-card {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   border-width: 5px;
   border-color: var(--fucsia-oscuro);
@@ -7,7 +7,7 @@
 }
 
 .recipe-item.carousel .recipe-image-container {
-  height: 250px;
+  height: 400px;
 }
 
 .recipe-item.carousel .recipe-title {
