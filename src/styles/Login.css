@@ -15,10 +15,11 @@
   text-align: center;
   border: 4px solid var(--fucsia);
   max-width: 450px;
-  width: 100%;
+  width: 90%; 
   backdrop-filter: blur(10px);
   transform: translateY(0);
   transition: all 0.3s ease;
+  margin: 0 auto;
 }
 
 .login-card:hover {
@@ -42,7 +43,7 @@
   color: var(--fucsia);
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 0 var(--amarillo-claro);
+  text-shadow: 2px 2px 0 var(--rosa-claro);
 }
 
 .login-form {
@@ -69,6 +70,7 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   background: var(--rosa-clarito);
+  box-sizing: border-box;
   }
 
 .input-group input:focus {
@@ -101,7 +103,6 @@
   cursor: pointer;
   margin-top: 1rem;
   font-weight: bold;
-  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
@@ -118,16 +119,48 @@
   transform: translateY(-1px);
 }
 
+.switch-mode {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--rosa-clarito);
+}
+
+.switch-button {
+  background: none;
+  border: none;
+  color: var(--fucsia-oscuro);
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.switch-button:hover {
+  color: var(--fucsia);
+  background: var(--rosa-clarito);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.switch-mode p {
+  color: var(--fucsia);
+  margin: 0;
+  font-size: 1rem;
+}
 
 .error-message {
-  color: #f44336;
+  color: var(--rojo);
   margin: 1rem 0;
   text-align: center;
   font-weight: bold;
   background: #ffebee;
   padding: 0.8rem;
   border-radius: 10px;
-  border-left: 4px solid #f44336;
+  border-left: 4px solid var(--rojo);
   animation: shake 0.5s ease-in-out;
 }
 
@@ -149,5 +182,4 @@
   color: #1976d2;
   font-weight: bold;
   margin: 0;
-  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
 }

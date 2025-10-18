@@ -29,7 +29,6 @@
   padding: 4rem 2rem;
   color: var(--fucsia-oscuro);
   font-size: 1.4rem;
-  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
   background: var(--rosa-clarito);
   border-radius: 20px;
   margin: 2rem;
@@ -114,6 +113,5 @@
   padding: 0.8rem 0.5rem;
   border-radius: 25px;
   backdrop-filter: blur(5px);
-  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
   line-height: 1.2;
 }

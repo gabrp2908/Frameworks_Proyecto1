@@ -37,7 +37,6 @@
   font-weight: bold;
   cursor: pointer;
   font-size: 1.1rem;
-  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
   transition: all 0.3s ease;
   transform: translateY(20px);
   opacity: 0;
@@ -68,7 +67,6 @@
   padding: 4rem 2rem;
   color: var(--fucsia-oscuro);
   font-size: 1.4rem;
-  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
   background: var(--rosa-clarito);
   border-radius: 20px;
   margin: 2rem;
