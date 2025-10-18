@@ -7,12 +7,9 @@
   --fucsia: #fd388a;
   --fucsia-oscuro: #bd2162;
   --fucsia-oscurito: #b0004a;
-  --amarillo: #ffde59;
-  --amarillo-claro: #fff3c2;
-  --amarillo-oscuro: #ffd324;
-  --blanco: #ffffff;
   --negro: #333333;
-  --sombra: rgba(0, 0, 0, 0.1);
+  --azul:#2196f3;
+  --verde:#4caf50 ;
 }
 
 @font-face{

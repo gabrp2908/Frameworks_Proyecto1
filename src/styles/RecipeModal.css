@@ -1,0 +1,314 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: white;
+  border-radius: 25px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border: 6px solid var(--fucsia-oscuro);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--fucsia-oscuro);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.8rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.close-button:hover {
+  background: var(--fucsia-oscurito);
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--rosa), var(--fucsia));
+  border-bottom: 5px solid var(--fucsia-oscuro);
+  position: relative;
+}
+
+.modal-image-container {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 5px solid white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, var(--rosa), var(--fucsia));
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.modal-image-container:hover img {
+  transform: scale(1.05);
+}
+
+.modal-title-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-title-section h2 {
+  color: var(--fucsia-oscurito);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0 var(--rosa-clarito), 4px 4px 0 rgba(255, 34, 174, 0.3);
+  line-height: 1.2;
+  font-family: 'title', 'Arial', sans-serif;
+}
+
+.recipe-description {
+  color: var(--negro);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.2rem;
+  border-radius: 15px;
+  border-left: 5px solid var(--fucsia-oscuro);
+}
+
+.modal-body {
+  padding: 2.5rem;
+}
+
+.ingredients-section,
+.steps-section,
+.notes-section {
+  margin-bottom: 3rem;
+}
+
+.ingredients-section h3,
+.steps-section h3,
+.notes-section h3 {
+  color: var(--fucsia-oscuro);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 4px solid var(--rosa);
+  display: inline-block;
+  text-shadow: 1px 1px 0 var(--rosa);
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--rosa-clarito);
+  border-radius: 15px;
+  border-left: 5px solid var(--fucsia);
+  transition: all 0.3s ease;
+  animation: slideInLeft 0.5s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.ingredient-name {
+  font-weight: bold;
+  color: var(--fucsia-oscuro);
+  font-size: 1.1rem;
+}
+
+.ingredient-quantity {
+  background: linear-gradient(135deg, var(--fucsia-oscuro), var(--fucsia));
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(255, 34, 174, 0.3);
+}
+
+.steps-section h3 {
+  color: var(--azul) !important;
+  border-bottom-color: var(--azul) !important;
+}
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: step-counter;
+}
+
+.step-item {
+  counter-increment: step-counter;
+  padding: 1.5rem 1.5rem 1.5rem 5rem;
+  margin-bottom: 1.2rem;
+  background: #e3f2fd;
+  border-radius: 15px;
+  border-left: 5px solid var(--azul);
+  position: relative;
+  transition: all 0.3s ease;
+  animation: slideInRight 0.5s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.step-item:hover {
+  background: #bbdefb;
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.step-item::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--azul);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 10px rgba(33, 150, 243, 0.4);
+}
+
+.step-item:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.notes-section {
+  background: #e8f5e8;
+  padding: 2rem;
+  border-radius: 20px;
+  border-left: 5px solid var(--verde);
+  animation: fadeIn 0.6s ease;
+}
+
+.notes-section h3 {
+  color: var(--verde) !important;
+  border-bottom-color: var(--verde) !important;
+}
+
+.notes-section p {
+  color: #2e7d32;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-top: 4px solid var(--fucsia-oscuro);
+  border-radius: 0 0 20px 20px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button, .edit-button {
+  background: linear-gradient(to bottom, var(--fucsia), var(--fucsia-oscurito));
+  color: white;
+}
+
+.delete-button:hover, .edit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 34, 174, 0.6);
+}
