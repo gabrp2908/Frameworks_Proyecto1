@@ -175,7 +175,7 @@
   padding: 1rem;
   background: #e3f2fd;
   border-radius: 15px;
-  border: 2px dashed #2196f3;
+  border: 2px dashed var(--azul);
 }
 
 .login-hint p {
